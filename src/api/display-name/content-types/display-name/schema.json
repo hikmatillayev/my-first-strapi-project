@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "display_names",
+  "info": {
+    "singularName": "display-name",
+    "pluralName": "display-names",
+    "displayName": "Display name"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "restaurants": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::restaurant.restaurant",
+      "inversedBy": "display_names"
+    }
+  }
+}
